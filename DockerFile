@@ -1,4 +1,5 @@
-FROM php:8.0-apache
+#Base image
+FROM php:7.2-apache
 
-# Install mysqli extension
+#Install musqli
 RUN docker-php-ext-install mysqli
