@@ -1,19 +1,11 @@
 <?php
-// MySQL connection details
-$host = 'mysql';
-$user = 'root';
-$password = 'root';
-$database = 'test_db';
 
-// Create connection
-$conn = new mysqli($host, $user, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Database connection failed: " . $conn->connect_error);
-} else {
-    echo "Database connection successful!";
-}
+    $conn = mysqli_connect('db', 'jake', 'jake', "myDb");
+    if ($conn){
+	    echo"<h1 style="color:green;"> Database Connected Sucessfully </h1>";
+    }else{
+	    echo"<h1 style="color:red;"> Unable To Connect To Database </h1>";
+    }
 
 // Close connection
 $conn->close();
